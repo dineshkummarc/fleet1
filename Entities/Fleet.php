@@ -56,10 +56,8 @@ class Fleet extends BaseModel
      */
     public function structure($structure): array
     {
-        $structure = [
-            'table' => ['name', 'published'],
-            'filter' => ['name', 'published'],
-        ];
+        $structure['table'] = ['name', 'published'];
+        $structure['filter'] = ['name', 'published'];
 
         return $structure;
     }
