@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Fleet\Entities;
+namespace Modules\Fleet\Models;
 
-use Modules\Base\Entities\BaseModel;
+use Modules\Base\Models\BaseModel;
 
 class Fleet extends BaseModel
 {
