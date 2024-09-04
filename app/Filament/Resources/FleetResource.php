@@ -2,20 +2,22 @@
 
 namespace Modules\Fleet\Filament\Resources;
 
-use Modules\Fleet\Filament\Resources\FleetResource\Pages;
-use Modules\Fleet\Filament\Resources\FleetResource\RelationManagers;
-use Modules\Fleet\Models\Fleet;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Fleet\Filament\Resources\FleetResource\Pages;
+use Modules\Fleet\Models\Fleet;
 
 class FleetResource extends Resource
 {
     protected static ?string $model = Fleet::class;
+
+    protected static ?string $slug = 'fleet/fleet';
+
+    protected static ?string $navigationGroup = 'Fleet';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

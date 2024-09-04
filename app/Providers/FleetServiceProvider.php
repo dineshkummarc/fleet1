@@ -9,7 +9,7 @@ class FleetServiceProvider extends ServiceProvider
 {
     protected string $moduleName = 'Fleet';
 
-    protected string $moduleNameLower = 'Fleet';
+    protected string $moduleNameLower = 'fleet';
 
     /**
      * Boot the application events.
