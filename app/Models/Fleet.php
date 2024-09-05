@@ -19,5 +19,5 @@ class Fleet extends BaseModel
      *
      * @var string
      */
-    protected $table = "fleet";
+    protected $table = "fleet_fleet";
 }
