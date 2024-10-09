@@ -3,15 +3,12 @@
 namespace Modules\Fleet\Filament\Resources;
 
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Modules\Fleet\Filament\Resources\FleetResource\Pages;
+use Modules\Base\Filament\Resources\BaseResource;
 use Modules\Fleet\Models\Fleet;
 
-class FleetResource extends Resource
+class FleetResource extends BaseResource
 {
     protected static ?string $model = Fleet::class;
 
@@ -50,27 +47,4 @@ class FleetResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListFleets::route('/'),
-            'create' => Pages\CreateFleet::route('/create'),
-            'edit' => Pages\EditFleet::route('/{record}/edit'),
-        ];
-    }
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
-    }
 }
