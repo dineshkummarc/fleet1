@@ -1,0 +1,39 @@
+{
+  "name": "mybizna/partner",
+  "description": "",
+  "type": "asgard-module",
+  "version": "2024.17",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Mybizna",
+      "homepage": "https://mybizna.com",
+      "email": "info@mybizna.com"
+    },
+    {
+      "name": "Dedan Irungu",
+      "email": "dedanirungu@gmail.com"
+    }
+  ],
+  "require": {
+    "mybizna/core": "^2024.4"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [],
+      "aliases": {}
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\Partner\\": "app/",
+      "Modules\\Partner\\Database\\Factories\\": "database/factories/",
+      "Modules\\Partner\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Partner\\Tests\\": "tests/"
+    }
+  }
+}
